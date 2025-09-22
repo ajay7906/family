@@ -1,20 +1,24 @@
+// routes/familyMemberRoutes.js
 const express = require('express');
 const router = express.Router();
-const memberController = require('../controllers/memberController');
+const familyMemberController = require('../controllers/memberController');
 
 // Add a new family member
-router.post('/add', memberController.addMember);
+router.post('/members', familyMemberController.addFamilyMember);
 
-// Update a family member
-router.put('/:id', memberController.updateMember);
+// // Bulk add family members
+// router.post('/members/bulk', familyMemberController.addBulkFamilyMembers);
 
-// Delete a family member
-router.delete('/:id', memberController.deleteMember);
+// // Get all members for a family
+// router.get('/families/:familyId/members', familyMemberController.getFamilyMembers);
 
-// Get all members for a family
-router.get('/family/:familyId', memberController.getMembersByFamily);
+// // Get a specific family member
+// router.get('/members/:id', familyMemberController.getFamilyMember);
 
-// Get a specific member
-router.get('/:id', memberController.getMemberById);
+// // Update a family member
+// router.put('/members/:id', familyMemberController.updateFamilyMember);
+
+// // Delete a family member
+// router.delete('/members/:id', familyMemberController.deleteFamilyMember);
 
 module.exports = router;

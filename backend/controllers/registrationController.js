@@ -58,7 +58,7 @@ const registrationController = {
   },
 
   // Submit family registration
-  submitRegistration: (req, res) => {
+submitRegistration: (req, res) => {
     // First ensure tables exist
     registrationController.ensureTableExists((err) => {
       if (err) {
