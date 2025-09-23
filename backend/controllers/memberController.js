@@ -8,7 +8,7 @@ const familyMemberController = {
         id INT AUTO_INCREMENT PRIMARY KEY,
         family_id INT NOT NULL,
         name VARCHAR(100) NOT NULL,
-        relation VARCHAR(50) NOT NULL,  -- Corrected column name
+        relation VARCHAR(50) NOT NULL, 
         marital_status VARCHAR(20) NOT NULL,
         gender VARCHAR(20) NOT NULL,
         blood_group VARCHAR(10),

@@ -104,7 +104,7 @@ export default function OTP() {
 
       if (data.success) {
         alert("Login successful!");
-        navigate("/registration"); // Directly to RegistrationPage
+        navigate("/head"); // Directly to HeadPage
       } else {
         alert(data.message || "Invalid OTP");
       }
