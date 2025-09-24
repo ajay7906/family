@@ -27,8 +27,8 @@ export default function MemberPage() {
         head_mobile: mobile,
       };
 
-      const response = await fetch('http://localhost:5000/api/registration/submit', {
-        method: 'POST',
+      const response = await fetch(`http://localhost:5000/api/routemember/approve/${familyData.familyId}`, {
+        method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
         },

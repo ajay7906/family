@@ -8,6 +8,7 @@ require('./config/database');
 const authRoutes = require('./routes/auth');
 const registrationRoutes = require('./routes/registration');
 const memberRoutes = require('./routes/members');
+const newMemberRoutes = require('./routes/memberRoutes');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use('/api/auth', authRoutes);
 app.use('/api/registration', registrationRoutes);
 app.use('/api/members', memberRoutes);
+app.use('/api/routemember', newMemberRoutes);
 
 // Health check endpoint
 app.get('/health', (req, res) => {
