@@ -102,8 +102,10 @@ const authController = {
         }
         
         res.json({
+          verification,
           success: true,
-          message: 'OTP verified successfully'
+          message: 'OTP verified successfully',
+          isSuperAdmin: verification.is_superadmin === 1
         });
       });
     } catch (error) {
