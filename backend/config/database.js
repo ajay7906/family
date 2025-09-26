@@ -7,7 +7,7 @@ const connection = mysql.createConnection({
   user:  'upsb_upsb',
   // password:  'A1ay79/6@.c60',
   password: 'upsb1234',
-  // password:'Ajay7906',
+  // password:'Ajay7906', database:society_manager
   database:  'upsb_upsb'
 });
 
@@ -21,7 +21,7 @@ connection.connect((err) => {
   console.log('Connected to MySQL server');
   
   // Create database if not exists
-  connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME || 'society_manager'}`, (err) => {
+  connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME || 'upsb_upsb'}`, (err) => {
     if (err) {
       console.error('Error creating database:', err);
       return;
@@ -30,7 +30,7 @@ connection.connect((err) => {
     console.log('Database ensured');
     
     // Switch to the database
-    connection.changeUser({database: process.env.DB_NAME || 'society_manager'}, (err) => {
+    connection.changeUser({database: process.env.DB_NAME || 'upsb_upsb'}, (err) => {
       if (err) {
         console.error('Error switching database:', err);
         return;
