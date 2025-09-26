@@ -3,11 +3,12 @@ require('dotenv').config();
 
 // Create connection
 const connection = mysql.createConnection({
-  host:  'localhost',
-  user:  'root',
-  password:  'A1ay79/6@.c60',
+  host:  '82.29.162.171',
+  user:  'upsb_upsb',
+  // password:  'A1ay79/6@.c60',
+  password: 'upsb1234',
   // password:'Ajay7906',
-  database:  'society_management_db'
+  database:  'upsb_upsb'
 });
 
 // Connect to MySQL and create database/table if not exists
